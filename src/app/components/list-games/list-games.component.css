@@ -1,0 +1,43 @@
+.section-games{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:20px;
+}
+.listagem-games{
+    margin:10px auto;
+    width:70%;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    flex-wrap: wrap;
+    padding:10px;
+}
+.game{
+    min-height:400px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    border:2px solid white;
+    margin-right:20px;
+    margin-bottom:30px;
+    cursor: pointer;
+}
+.game img{
+    width:200px;
+    height:300px;
+}
+h4{
+    border:2px solid crimson;
+    border-radius:50%;
+    background-color:crimson;
+    padding:5px;
+}
+button{
+    background-color:crimson;
+    padding:10px;
+    color:white;
+    margin:0 auto;
+}

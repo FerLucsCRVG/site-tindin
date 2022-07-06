@@ -1,0 +1,23 @@
+.login-tindin{
+    width:30%;
+    min-height:400px;
+    margin:60px auto;
+    background-color:whitesmoke;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction: column;
+    padding:30px;
+    border-radius:10%;
+}
+form{
+    width:100%;
+    min-height:200px;
+    display:flex;
+    justify-content:space-around;
+    flex-direction:column;
+}
+form input{
+    min-height:30px;
+    padding:5px;
+}

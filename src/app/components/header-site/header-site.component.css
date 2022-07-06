@@ -1,0 +1,33 @@
+header{
+    width:100%;
+    background-color:crimson;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:5px;
+    margin-bottom:20px;
+}
+header img{
+    cursor:pointer;
+    width:150px;
+}
+.pesquisa{
+    border:2px solid black;
+    display:flex;
+    justify-content: space-between;
+}
+.pesquisa input,.pesquisa button{
+    padding:5px;
+}
+.login{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:100%;
+    background-color:black;
+    color:white;
+    padding:30px;
+    cursor:pointer;
+    border:2px solid lightgray;
+}
+

@@ -1,0 +1,27 @@
+.photo-carrosel{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:30px;
+}
+.photo{
+    margin:0 auto;
+    width:80%;
+    height:400px;
+    overflow: hidden;
+}
+.photo img{
+    width:100%;
+    height:inherit;
+    border-radius:10px;
+}
+.seta{
+    width:auto;
+    border:2px solid crimson;
+    color:crimson;
+    background-color:#111111;
+    padding:10px;
+    font-size:20px;
+    text-align:center;
+}

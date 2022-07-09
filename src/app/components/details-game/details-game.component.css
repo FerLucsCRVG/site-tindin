@@ -59,10 +59,12 @@
     display:flex;
     justify-content:space-around;
     align-items:center;
+    overflow:hidden;
 }
 .photo-second img{
-    width:25%;
-    height:25%;
+    width:60%;
+    height:60%;
+    cursor:pointer;
 }
 button{
     width:50pxç;
@@ -83,7 +85,7 @@ button{
     min-height:200px;
 }
 .info-game-1 h4{
-    width:10%;
+    width:15%;
     border:2px solid crimson;
     border-radius:50%;
     background-color:crimson;

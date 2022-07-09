@@ -1,10 +1,12 @@
 <header>
     <img src="https://www.tindin.com.br/assets/img/footer/logo.png" alt="logo" routerLink="">
-    <div class="pesquisa">
-        <input type="text" placeholder="Pesquisar">
-        <button>Procurar</button>
+    <div class="pesquisa" *ngIf="!temLogin">
+        <form [formGroup]="form" (ngSubmit)="pesquisarJogo()">
+            <input type="text" placeholder="Pesquisar" formControlName="pesquisar">
+            <button type="submit">Pesquisar</button>
+        </form>
     </div>
-    <div class="login" routerLink="login">
+    <div class="login" routerLink="/login">
         <h3>LOGIN</h3>
     </div>
 </header>

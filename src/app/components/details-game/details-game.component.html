@@ -1,16 +1,14 @@
-<div class="section-details">
-    <span><span class="sp-1">♦</span> | Resident Evil 4</span>
+<div class="section-details" *ngIf="game">
+    <span><span class="sp-1" routerLink="/games">♦</span> | {{game.game.title}}</span>
     <div class="game-details">
         <div class="photo-game">
             <div class="photo-main">
-                <img src="https://blog-imgs-147.fc2.com/r/e/c/receitasfaceis/resident-evil-4-remake-363.jpg" alt="re4">
+                <img id='photo-1' [src]="game.game.photos[0].url" [alt]="game.game.photos[0].name">
             </div>
             <div class="photo-s1">
                 <button>←</button>
-                <div class="photo-second">
-                    <img src="https://blog-imgs-147.fc2.com/r/e/c/receitasfaceis/resident-evil-4-remake-363.jpg" alt="">
-                    <img src="https://blog-imgs-147.fc2.com/r/e/c/receitasfaceis/resident-evil-4-remake-363.jpg" alt="">
-                    <img src="https://blog-imgs-147.fc2.com/r/e/c/receitasfaceis/resident-evil-4-remake-363.jpg" alt="">
+                <div class="photo-second" *ngFor="let photo of game.game.photos">
+                    <img (click)="mudarFoto(photo.url)" [src]="photo.url" alt="">
                 </div>
                 <button>→</button>
             </div>
@@ -18,23 +16,20 @@
         </div>
         <div class="details-geral">
             <div class="info-game-1">
-                <h1>Resident Evil 4</h1>
-                <h4>7,5/10</h4>
+                <h1>{{game.game.title}}</h1>
+                <h4>{{game.game.rating | number:'1.1-1'}} / 10</h4>
             </div>
             <hr>
             <div class="info-game-1">
-                <h3>Genres: <i>Terror</i></h3>
-                <h3>Studio: <i>Capcom</i></h3>
-                <h3>Productor: <i>Warner 18</i></h3>
-                <h3>Total Votes: <i>800</i></h3>
-                <h3>Company: <i>YXZ Company</i></h3>
-                <h3>Platforms: <i>XBOX 5,PS5</i></h3>
-                <h3>Tags: <i>#terror #good game</i></h3>
+                <h3>Genres: <i *ngFor="let genero of game.game.genres">{{genero}} </i></h3>
+                <h3>Total Votes: <i>{{game.game.totalVotes}}</i></h3>
+                <h3>Platforms: <i *ngFor="let platforms of game.game.platforms">{{platforms}} </i></h3>
+                <h3>Tags: <i *ngFor="let tags of game.game.tags">{{tags}} </i></h3>
             </div>
             <hr>
             <div class="info-game-1">
-                <h2>MEDIUM PRICE $10.00</h2>
-                <p>Release date 01/01/2023</p>
+                <h2>MEDIUM PRICE ${{game.game.mediumPrice}}</h2>
+                <p>Release date - {{game.game.createdAt | date}}</p>
                 <button>VOTE NOW</button>
             </div>
             <hr>
@@ -43,7 +38,7 @@
     <div class="descricao-game-1">
         <h2>Description</h2>
         <div class="descricao-game-2">
-            <h3>samasdmaçsldmaeçvmomeomfaçwscmleafmçaslc</h3>
+            <h3>{{game.game.description}}</h3>
         </div>
     </div>
 </div>

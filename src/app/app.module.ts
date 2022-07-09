@@ -10,7 +10,9 @@ import { SectionMainComponent } from './components/section-main/section-main.com
 import { ListGamesComponent } from './components/list-games/list-games.component';
 import { LoginTindinComponent } from './components/login-tindin/login-tindin.component';
 import { DetailsGameComponent } from './components/details-game/details-game.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,11 @@ import { DetailsGameComponent } from './components/details-game/details-game.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
